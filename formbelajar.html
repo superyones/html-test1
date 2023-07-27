@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hello world</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            html{
+                font-family: Arial, Helvetica, sans-serif; 
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content:space-between;
+                min-height: 100vh; 
+            }
+            
+            body {
+                margin: 0px;
+            }
+
+            .navbar {
+                display: flex;
+                flex-direction: row;
+                border-bottom: 2px solid black;
+            }
+            
+            .logo {
+                margin: 10px 25px 10px 25px;
+            }
+
+            .navmenu {
+                display: flex;
+                margin-left: auto;
+                margin-right: 25px;
+                align-items: center;                
+            }
+
+            .home {
+                padding: 10px 50px 10px 50px;
+                border: 1px solid black;
+                border-radius: 10px 0px 0px 10px;
+            }
+
+            .myprofile {
+                padding: 10px 50px 10px 50px;
+                border: 1px solid black;
+            }
+
+            .portofolio {
+                padding: 10px 50px 10px 50px;
+                border: 1px solid black;
+            }
+
+            .messageus {
+                padding: 10px 50px 10px 50px;
+                border: 1px solid black;
+                border-radius: 0px 10px 10px 0px;
+            }
+
+            .fheader {
+                margin-top: -100px;
+                margin-left: 150px;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: row;
+                margin-top: -180px;
+            }
+
+            .content > div {
+                display: flex;
+                flex: 1;
+                align-content: center;
+                justify-content: center;
+            }
+
+            .form_user {
+                width: 100%;
+                height: 100%;
+                margin-left: 150px;
+                margin-right: 150px;
+            }
+
+            .table_form {
+                width: 100%;
+                height: 100%;
+            }
+
+            .form_label {
+                width: 120px;
+                text-align: justify;
+            }
+
+            label::after {
+                content: ":";
+                position: absolute;
+                left: 265px;
+            }
+            
+            .input-group {
+                width: 100%;
+                height: 50%;
+                padding: 0px;
+            }
+
+            .text-input {
+                vertical-align: top;
+            }
+
+            .submit_button {
+                height: 30px;
+                width: 100%;
+            }
+
+            .table_user {
+                margin-left: 150px;
+                margin-right: 150px;
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            .table_user th {
+                border: 1px solid black;
+                background-color: rgb(190, 187, 187); 
+                text-align: center; 
+                height: 30px;        
+            }
+            
+            .table_user td {
+                border: 1px solid black; 
+                text-align: center;
+                height: 30px;  
+                width: 150px;
+                
+            }
+
+            footer {
+                display: flex;
+                justify-content: flex-end;
+                border-top: 2px solid black;               
+            }
+
+            .credits {
+                margin: 39px 25px 39px 0px;            
+            }
+
+        </style>
+    </head>
+    <body>   
+        <div class="container">
+            <nav class="navbar">
+                <img src="https://pkk.uma.ac.id/wp-content/uploads/2023/06/revo.png" class="logo" width="75px" height="75px">            
+                    <div class="navmenu">
+                        <div class="home">Home</div>
+                        <div class="myprofile">My Profile</div>
+                        <div class="portofolio">Portofolio</div>
+                        <div class="messageus">Message Us</div>
+                    </div>
+            </nav>
+    
+            <header class="fheader">
+                <h1>Form Belajar</h1>
+                <p>Ini adalah website latihan pertama</p>
+                
+            </header>
+    
+            <main class="content">
+                <div>
+                    <form class="form_user">
+                        <table class="table_form">
+                            <tr>
+                                <td class="form_label">
+                                    <label for="name">Nama</label>
+                                </td>
+                                <td>
+                                    <input class="input-group" type="text"  id="name" name="name" placeholder="Nama">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="form_label">
+                                    <label for="bdate">Tanggal Lahir</label>
+                                </td>
+                                <td>
+                                    <input class="input-group" type="date" id="bdate" name="bdate">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="form_label">
+                                    <label for="gender">Jenis Kelamin</label>
+                                </td>
+                                <td>
+                                    <input type="radio" id="gender" name="gender" value="male">
+                                    <label for="gender">Laki-Laki</label>
+                                    <input type="radio" id="gender" name="gender" value="female">
+                                    <label for="gender">Perempuan</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="form_label text-input">
+                                    <label for="message">Pesan</label>
+                                </td>
+                                <td>
+                                    <textarea class="input-group" rows="7" id="message" name="message" placeholder="Pesan"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input class="submit_button" type="submit" value="Submit">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+    
+                <div>
+                    <table class="table_user">
+                        <tr>
+                            <th>Nama</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Domisili</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Profile</th>
+                            <th>Delete</th>
+                        </tr>
+                        <tr>
+                            <td>Ada Lovelace</td>
+                            <td >December 10, 1815</td>
+                            <td>Perempuan</td>
+                            <td>Belajar buat website</td>
+                            <td ><a href="https://google.com" target="_blank">Klik disini</td>
+                            <td><i class="material-icons">&#xe872;</i></td>
+                        </tr>
+                        <tr>
+                            <td>Grace Hopper</td>
+                            <td >December 09, 1906</td>
+                            <td>Perempuan</td>
+                            <td>Hellow world</td>
+                            <td ><a href="https://google.com" target="_blank">Klik disini</td>
+                            <td><i class="material-icons">&#xe872;</i></td>
+                        </tr>
+                        <tr>
+                            <td>Margaret Hamilton</td>
+                            <td >August 17, 1936</td>
+                            <td>Perempuan</td>
+                            <td>Test dulu</td>
+                            <td ><a href="https://google.com" target="_blank">Klik disini</td>
+                            <td><i class="material-icons">&#xe872;</i></td>
+                        </tr>
+                        <tr>
+                            <td>Joan Clarke</td>
+                            <td >June 24, 1917</td>
+                            <td>Laki-Laki</td>
+                            <td>Selalu semangat</td>
+                            <td ><a href="https://google.com" target="_blank">Klik disini</td>
+                            <td><i class="material-icons">&#xe872;</i></td>
+                        </tr>
+                    </table>
+                </div>
+            </main>
+            <footer>
+                <p class="credits">Created by Wendy</p>
+            </footer>
+        </div>  
+    </body>
+</html>
